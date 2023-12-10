@@ -11,6 +11,85 @@ $(document).ready(function () {
    ]
 
 
+
+let arreglo_peaceful = arreglo_nft.filter((e)=> {
+    return e.categoria == "PEACEFUL APE"
+})
+
+
+$.each(arreglo_peaceful, function (indexInArray, e) { 
+     $(".cont_peaceful").append(`<div class="card">
+     <div class="cont_img">
+         <img src="${e.imagen}" alt="">
+     </div>
+     
+     
+     
+     
+     <div class="nombres">
+         <h3>${e.nombre}</h3>
+         <p><img src="./imagenes/icono.svg" alt="">  ${e.precio}</p>
+     </div>
+     <hr>
+     <div class="categoria">
+         <p class="categoria" >${e.categoria}</p>
+         <p><i class="fa-solid fa-heart"></i></p>
+     </div>
+     
+     <div class="cont_oculto" >
+     
+     <div class="nombres">
+         <h3>${e.nombre}</h3>
+         <p><img src="./imagenes/icono.svg" alt="">  ${e.precio}</p>
+     </div>
+     <hr>
+     <div class="categoria">
+         <p class="categoria" >${e.categoria}</p>
+         <p><i class="fa-solid fa-heart"></i></p>
+     </div>
+     <div class="cont_info" >
+     <a  href="info.html?nombre=${encodeURIComponent(e.nombre)}&imagen=${encodeURIComponent(e.imagen)}&precio=${e.precio}" >Ver mas</a>
+     
+     </div>
+     
+     
+     </div>
+     `);
+});
+
+
+
+
+
+
+let arreglo_top = [
+{img_usuario: "https://axiesreact.themesflat.co/static/media/avt-1.71a23be871d509a23d2d.jpg", nom_usuario: "Crispin Berry", eth_user: 214.2 },
+{img_usuario: "https://axiesreact.themesflat.co/static/media/avt-2.e101dc63363945410d54.jpg", nom_usuario: "Samson Frost", eth_user: 205.43 },
+{img_usuario: "https://axiesreact.themesflat.co/static/media/avt-4.cbb2f9fb25c1e375d958.jpg", nom_usuario: "Tommy Alrez", eth_user: 170.3 },
+{img_usuario: "https://axiesreact.themesflat.co/static/media/avt-5.cb38feefc0ea48ef8f43.jpg", nom_usuario: "Windsor Lane", eth_user: 120.7 },
+{img_usuario: "https://axiesreact.themesflat.co/static/media/avt-5.cb38feefc0ea48ef8f43.jpg", nom_usuario: "Andy Hurldbutt", eth_user: 82.79 },
+{img_usuario: "https://axiesreact.themesflat.co/static/media/avt-3.c03860ca1e2872296499.jpg", nom_usuario: "Blake Bank", eth_user: 68.2 },
+]
+
+$.each(arreglo_top, function (indexInArray, e) { 
+     
+$(".cont_top_seller").append(`
+<div class="tarjeta_top">
+<div class="img_top_seller">
+    <img src="${e.img_usuario}" alt="">
+</div>
+<h3>${e.nom_usuario}</h3>
+<h4>${e.eth_user}</h4>
+</div>
+
+`);
+
+
+});
+
+
+
+
    
 
     

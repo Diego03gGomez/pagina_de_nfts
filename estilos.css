@@ -678,6 +678,7 @@ border-radius: 5px;
 
 .col1_collection img, .col2_collection img{
     width: 100%;
+    object-fit: cover;
 }
 
 .dos_imagenes{
@@ -728,6 +729,37 @@ margin-top: -10px;
 
 
 #fondo_collection{
+    padding-top: 100px;
+}
+
+
+
+.cont_top_seller{
+/* background-color: red;*/
+    margin: auto;
+    width: 90%;
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.tarjeta_top{
+    text-align: center;
+}
+
+.titulo_top_seller{
+    margin: auto;
+    width: 90%;
+    color: white;
+}
+
+.tarjeta_top img{
+    border-radius: 35px;
+    width: 120px;
+}
+
+
+#fondo_top_seller{
     padding-top: 100px;
 }
 
@@ -797,7 +829,15 @@ margin-top: -10px;
 
 
 
+
+
+
 @media (max-width:1124px){
+
+.cont_top_seller{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 
 .titulo_collection{
     width: 90%;
@@ -905,6 +945,13 @@ nav{
 
 
 @media (max-width: 780px){
+
+
+.cont_top_seller{
+    grid-template-columns: 1fr 1fr;
+}
+
+
 
     .cont_collection{
         grid-template-columns: 1fr;
